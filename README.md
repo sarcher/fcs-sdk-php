@@ -75,7 +75,7 @@ $fcs = new Fcs(array(
     'secret' => 'your-fcs-access-secret'
 ));
 
-$uri = $fcs->getAssetUriByEan("9780306406157",
+$uri = $fcs->getAssetUriByEan("9780306406157",      // EAN/ISBN13 of the book to download
                               AssetTypes::Epub,     // Epub or Pdf for Unprotected
                                                     //     TDrm for Temporary Protected
                                                     //     PDrm for Permanent Protected
