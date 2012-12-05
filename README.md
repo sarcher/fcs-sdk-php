@@ -1,4 +1,1 @@
-fcs-sdk-php
-===========
-
-FCS (Firebrand Cloud Services) SDK for PHP
+# FCS (Firebrand Cloud Services) SDK for PHP
