@@ -274,18 +274,18 @@ class Fcs {
     public static function configure($config) {
         if (!$config) return self::$_config;
         self::$_config = self::$_config ? array_merge(self::$_config, $config) : $config;
-        self::$_debug = self::getArrayValue(self::$_config, 'Debug');
-        self::$_logPath = self::getArrayValue(self::$_config, 'LogPath');
-        self::$_uploadDebug = self::getArrayValue(self::$_config, 'UploadDebug');
-        self::$_uploadProgress = self::getArrayValue(self::$_config, 'UploadProgress');
+        self::$_debug = self::getArrayValue(self::$_config, 'debug');
+        self::$_logPath = self::getArrayValue(self::$_config, 'logPath');
+        self::$_uploadDebug = self::getArrayValue(self::$_config, 'uploadDebug');
+        self::$_uploadProgress = self::getArrayValue(self::$_config, 'uploadProgress');
         return self::$_config;
     }
 
     public function __construct($config = null) {
         $config = self::configure($config);
-        $servicesUrl = self::getArrayValue($config, 'ServicesUrl');
-        $accessKey = self::getArrayValue($config, 'AccessKey');
-        $accessSecret = self::getArrayValue($config, 'AccessSecret');
+        $servicesUrl = self::getArrayValue($config, 'url');
+        $accessKey = self::getArrayValue($config, 'key');
+        $accessSecret = self::getArrayValue($config, 'secret');
 
         if (!$servicesUrl || !$accessKey || !$accessSecret) {
             throw self::error("FCS Client Error: One or all of the following parameters are invalid: " .
