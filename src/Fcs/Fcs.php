@@ -402,6 +402,10 @@ class Fcs {
         return false;
     }
 
+    public function getReaderAccessToken($site, $email) {
+        return $this->send("GET", "reader-access-token?site=".$site."&email=".$email, null, null, false);
+    }
+
     public function getAssetUriById($assetId, $price = "", $user = "") {
         return $this->send("GET", "asset-uris/" . $assetId . "?price=" . $price . "&user=" . $user, null, null, false);
     }
