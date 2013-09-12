@@ -107,9 +107,7 @@ $fcs = new Fcs(array(
     'secret' => 'your-fcs-access-secret'
 ));
 
-$token = $fcs->getReaderAccessToken('your-site-tag', 'a-users-email');  // This user should have an Fcs Reader account.
+$uri = $fcs->getUserLibraryUri(fcs-site-key, user-email);
 
-setcookie($token['name'], $token['value'], time()+60*60*24*1);  // Set to expire in 1 day.  This is how long the token will last.
-
-header("Location: 'site-uri');
+header("Location: $uri");
 ```

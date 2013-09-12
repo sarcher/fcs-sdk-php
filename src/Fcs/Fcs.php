@@ -402,8 +402,8 @@ class Fcs {
         return false;
     }
 
-    public function getReaderAccessToken($site, $email) {
-        return $this->send("GET", "reader-access-token?site=".$site."&email=".$email, null, null, false);
+    public function getUserLibraryUri($site, $email) {
+        return $this->send("GET", "user-library-uri?site=".$site."&email=".$email, null, null, false);
     }
 
     public function getAssetUriById($assetId, $price = "", $user = "") {
@@ -704,16 +704,16 @@ class Fcs {
         return $array;
     }
 
-    private static function error($msg) {
+    public static function error($msg) {
         self::log("error", $msg);
         return new ErrorException($msg);
     }
 
-    private static function info($msg) {
+    public static function info($msg) {
         self::log("info", $msg);
     }
 
-    private static function debug($msg) {
+    public static function debug($msg) {
         self::log("debug", $msg);
     }
 
