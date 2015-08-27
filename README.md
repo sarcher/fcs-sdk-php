@@ -37,7 +37,7 @@ your project. In order to use the FCS SDK for PHP through Composer, you must do 
 
 1. Download and install Composer.
 
-        curl -sS "http://getcomposer.org/installer" | php
+        curl -s "http://getcomposer.org/installer" | php
 
 1. Install your dependencies.
 
