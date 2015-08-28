@@ -113,17 +113,19 @@ header("Location: $uri");
 ### Asset Types
 The following is a list of the asset types that can be used in getAssetUriByEan.  Auto asset types are used if your account is configured to do Auto DRM conversion.  If conversion requests are made manually, the non Auto asset types are used instead.
 
-* **"epub"** - Unprotected (Open) ePub
-* **"pdf"** - Unprotected (Open) PDF
-* **"tdrmepubauto"** - Temporarily (55 days) Protected (Adobe DRM) ePub.  Auto converted.
-* **"tdrmpdfauto"** - Temporarily (55 days) Protected (Adobe DRM) PDF.  Auto converted.
-* **"tdrmauto"** - Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
-* **"tdrmepub"** - Temporarily (55 days) Protected (Adobe DRM) ePub.  Manually converted.
-* **"tdrmpdf"** - Temporarily (55 days) Protected (Adobe DRM) PDF.  Manually converted.
-* **"tdrm"** - Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
-* **"pdrmepubauto"** - Permanently Protected (Adobe DRM) ePub.  Auto converted.
-* **"pdrmpdfauto"** - Permanently Protected (Adobe DRM) PDF.  Auto converted.
-* **"pdrmauto"** - Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
-* **"pdrmepub"** - Permanently Protected (Adobe DRM) ePub.  Manually converted.
-* **"pdrmpdf"** - Permanently Protected (Adobe DRM) PDF.  Manually converted.
-* **"pdrm"** - Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
+Asset Type|Description
+----------|-----------
+**"epub"**|Unprotected (Open) ePub
+**"pdf"**|Unprotected (Open) PDF
+**"tdrmepubauto"**|Temporarily (55 days) Protected (Adobe DRM) ePub.  Auto converted.
+**"tdrmpdfauto"**|Temporarily (55 days) Protected (Adobe DRM) PDF.  Auto converted.
+**"tdrmauto"**|Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
+**"tdrmepub"**|Temporarily (55 days) Protected (Adobe DRM) ePub.  Manually converted.
+**"tdrmpdf"**|Temporarily (55 days) Protected (Adobe DRM) PDF.  Manually converted.
+**"tdrm"**|Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
+**"pdrmepubauto"**|Permanently Protected (Adobe DRM) ePub.  Auto converted.
+**"pdrmpdfauto"**|Permanently Protected (Adobe DRM) PDF.  Auto converted.
+**"pdrmauto"**|Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
+**"pdrmepub"**|Permanently Protected (Adobe DRM) ePub.  Manually converted.
+**"pdrmpdf"**|Permanently Protected (Adobe DRM) PDF.  Manually converted.
+**"pdrm"**|Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
