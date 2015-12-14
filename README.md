@@ -129,3 +129,5 @@ Asset Type|Description
 **"pdrmepub"**|Permanently Protected (Adobe DRM) ePub.  Manually converted.
 **"pdrmpdf"**|Permanently Protected (Adobe DRM) PDF.  Manually converted.
 **"pdrm"**|Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
+**"ancillarypdf"**|Permanently Protected (Adobe DRM) PDF that is associated with a title but ancillary to it.  Auto converted.
+**"ancillaryzip"**|Unprotected zip file that is associated with a title but ancillary to it.
