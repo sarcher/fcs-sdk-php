@@ -407,11 +407,11 @@ class Fcs {
     }
 
     public function getAssetUriById($assetId, $price = "", $user = "") {
-        return $this->send("GET", "asset-uris/" . $assetId . "?price=" . urlencode($price) . "&user=" . urlencode($user), null, null, false);
+        return $this->send("GET", "asset-uris/" . $assetId . "?price=" . $price . "&user=" . $user, null, null, false);
     }
 
     public function getAssetUriByEan($ean, $type, $price = "", $user = "") {
-        return $this->send("GET", "asset-uris?ean=" . $ean . "&type=" . $type . "&price=" . urlencode($price) . "&user=" . urlencode($user), null, null, false);
+        return $this->send("GET", "asset-uris?ean=" . $ean . "&type=" . $type . "&price=" . $price . "&user=" . $user, null, null, false);
     }
 
     private function send($method, $uri, $root, $obj, $returnsXml = true) {
