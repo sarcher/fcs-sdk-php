@@ -32,6 +32,7 @@ class AssetTypes {
     const Epub = 'CLD_AT_Epub';
     const Pdf = 'CLD_AT_WebPdf';
     const Kindle = 'CLD_AT_Kindle';
+    const PublisherKindle = 'CLD_AT_PublisherKindle';
     const Cover = 'CLD_AT_CoverArtHigh';
     const TDrm = 'CLD_AT_TDrm'; // Temporary Protected - expires after 55 days
     const TDrmEpub = 'CLD_AT_TDrmEpub'; // Temporary Protected Epub - expires after 55 days
@@ -70,6 +71,8 @@ class Fcs {
     const CLD_NAMESPACE = 'http://cloud.firebrandtech.com/';
     const MODEL_NAMESPACE = 'http://schemas.datacontract.org/2004/07/Cloud.Model';
 
+    // When uploading an asset, if you do not specify an asset type, the file extension
+    // will be used to look up the default asset type here:
     private static $_assetTypes = array("epub" => AssetTypes::Epub,
                                         "pdf" => AssetTypes::Pdf,
                                         "mobi" => AssetTypes::Kindle,
@@ -320,14 +323,17 @@ class Fcs {
         return $this->send("GET", "assets/" . $assetId, "asset", null);
     }
 
-    public function uploadAsset(array $product, $assetPath) {
+    public function uploadAsset(array $product, $assetPath, $assetType = null) {
         self::info("FCS Uploading $assetPath");
         $pathInfo = pathinfo($assetPath);
         $ext = strtolower($pathInfo['extension']);
         $fileName = $pathInfo['basename'];
         $contentType = self::$_mimeTypes[$ext];
 
-        $assetType = self::$_assetTypes[$ext];
+        if ($assetType == null) {
+          $assetType = self::$_assetTypes[$ext];
+        }
+
         $asset = array('tag' => $product['tag'] . "-" . $assetType,
                        'status-tag' => 'CLD_AS_Pending',
                        'product-id' => $product['id'],
