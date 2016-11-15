@@ -115,20 +115,21 @@ The following is a list of the asset types that can be used in getAssetUriByEan.
 
 Asset Type|Description
 ----------|-----------
-**"epub"**|Unprotected (Open) ePub
+**"epub"**|Unprotected (Open) EPUB
+**"publisherkindle"**|Mobi (created by the publisher, rathern than being auto converted from an EPUB)
 **"pdf"**|Unprotected (Open) PDF
-**"tdrmepubauto"**|Temporarily (55 days) Protected (Adobe DRM) ePub.  Auto converted.
+**"tdrmepubauto"**|Temporarily (55 days) Protected (Adobe DRM) EPUB.  Auto converted.
 **"tdrmpdfauto"**|Temporarily (55 days) Protected (Adobe DRM) PDF.  Auto converted.
-**"tdrmauto"**|Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
-**"tdrmepub"**|Temporarily (55 days) Protected (Adobe DRM) ePub.  Manually converted.
+**"tdrmauto"**|Temporarily (55 days) Protected (Adobe DRM) asset (EPUB if it exists; PDF otherwise).  Auto converted.
+**"tdrmepub"**|Temporarily (55 days) Protected (Adobe DRM) EPUB.  Manually converted.
 **"tdrmpdf"**|Temporarily (55 days) Protected (Adobe DRM) PDF.  Manually converted.
-**"tdrm"**|Temporarily (55 days) Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
-**"pdrmepubauto"**|Permanently Protected (Adobe DRM) ePub.  Auto converted.
+**"tdrm"**|Temporarily (55 days) Protected (Adobe DRM) asset (EPUB if it exists; PDF otherwise).  Manually converted.
+**"pdrmepubauto"**|Permanently Protected (Adobe DRM) EPUB.  Auto converted.
 **"pdrmpdfauto"**|Permanently Protected (Adobe DRM) PDF.  Auto converted.
-**"pdrmauto"**|Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Auto converted.
-**"pdrmepub"**|Permanently Protected (Adobe DRM) ePub.  Manually converted.
+**"pdrmauto"**|Permanently Protected (Adobe DRM) asset (EPUB if it exists; PDF otherwise).  Auto converted.
+**"pdrmepub"**|Permanently Protected (Adobe DRM) EPUB.  Manually converted.
 **"pdrmpdf"**|Permanently Protected (Adobe DRM) PDF.  Manually converted.
-**"pdrm"**|Permanently Protected (Adobe DRM) asset (ePub if it exists; PDF otherwise).  Manually converted.
+**"pdrm"**|Permanently Protected (Adobe DRM) asset (EPUB if it exists; PDF otherwise).  Manually converted.
 **"ancillaryzip"**|Unprotected zip file that is associated with a title but ancillary to it.
 **"ancillarypdf"**|Unprotected PDF file that is associated with a title but ancillary to it.
 **"ancillarypdrmpdf"**|Permanently Protected (Adobe DRM) PDF that is associated with a title but ancillary to it.  Auto converted.
