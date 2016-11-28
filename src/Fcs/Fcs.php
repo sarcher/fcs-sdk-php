@@ -35,11 +35,12 @@ class AssetTypes {
     const PublisherKindle = 'CLD_AT_PublisherKindle';
     const Cover = 'CLD_AT_CoverArtHigh';
     const TDrm = 'CLD_AT_TDrm'; // Temporary Protected - expires after 55 days
-    const TDrmEpub = 'CLD_AT_TDrmEpub'; // Temporary Protected Epub - expires after 55 days
+    const TDrmEpub = 'CLD_AT_TDrmEpub'; // Temporary Protected EPUB - expires after 55 days
     const TDrmPdf = 'CLD_AT_TDrmPdf'; // Temporary Protected Pdf - expires after 55 days
     const PDrm = 'CLD_AT_PDrm'; // Permanent Protected
-    const PDrmEpub = 'CLD_AT_PDrmEpub'; // Permanent Protected Epub
+    const PDrmEpub = 'CLD_AT_PDrmEpub'; // Permanent Protected EPUB
     const PDrmPdf = 'CLD_AT_PDrmPdf'; // Permanent Protected Pdf
+    const EDrmEpub = 'CLD_AT_EDrmEpub'; // Enthrill social DRMed EPUB
 }
 
 class ConversionStatuses {
